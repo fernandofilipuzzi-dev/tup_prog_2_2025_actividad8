@@ -2,8 +2,8 @@
 
 internal class Vehiculo : IExportable
 {
-    public string Patente;
-    public double Importe;
+    public string Patente { get; set; }
+    public double Importe { get; set; }
 
     public Vehiculo()
     {

@@ -1,6 +1,6 @@
 ﻿namespace Ejercicio1
 {
-    partial class Form1
+    partial class FormPrincipal
     {
         /// <summary>
         ///  Required designer variable.
@@ -35,17 +35,19 @@
             // 
             // txtMostrar
             // 
-            txtMostrar.Location = new Point(12, 12);
+            txtMostrar.Location = new Point(15, 17);
+            txtMostrar.Margin = new Padding(4, 4, 4, 4);
             txtMostrar.Multiline = true;
             txtMostrar.Name = "txtMostrar";
-            txtMostrar.Size = new Size(349, 291);
+            txtMostrar.Size = new Size(448, 406);
             txtMostrar.TabIndex = 0;
             // 
             // btnImportar
             // 
-            btnImportar.Location = new Point(367, 12);
+            btnImportar.Location = new Point(472, 132);
+            btnImportar.Margin = new Padding(4, 4, 4, 4);
             btnImportar.Name = "btnImportar";
-            btnImportar.Size = new Size(98, 68);
+            btnImportar.Size = new Size(126, 95);
             btnImportar.TabIndex = 1;
             btnImportar.Text = "Importar";
             btnImportar.UseVisualStyleBackColor = true;
@@ -53,23 +55,28 @@
             // 
             // btnExportar
             // 
-            btnExportar.Location = new Point(367, 86);
+            btnExportar.Location = new Point(472, 235);
+            btnExportar.Margin = new Padding(4, 4, 4, 4);
             btnExportar.Name = "btnExportar";
-            btnExportar.Size = new Size(98, 68);
+            btnExportar.Size = new Size(126, 95);
             btnExportar.TabIndex = 2;
             btnExportar.Text = "Exportar";
             btnExportar.UseVisualStyleBackColor = true;
             btnExportar.Click += btnExportar_Click;
             // 
-            // Form1
+            // FormPrincipal
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(618, 437);
             Controls.Add(btnExportar);
             Controls.Add(btnImportar);
             Controls.Add(txtMostrar);
-            Name = "Form1";
+            Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(4, 4, 4, 4);
+            Name = "FormPrincipal";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             ResumeLayout(false);
             PerformLayout();

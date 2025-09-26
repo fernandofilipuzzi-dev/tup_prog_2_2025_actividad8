@@ -4,10 +4,10 @@ using System.Security.Cryptography;
 
 namespace Ejercicio1;
 
-public partial class Form1 : Form
+public partial class FormPrincipal : Form
 {
     List<Vehiculo> vehiculos = new List<Vehiculo>();
-    public Form1()
+    public FormPrincipal()
     {
         InitializeComponent();
     }
@@ -27,6 +27,7 @@ public partial class Form1 : Form
                 fs = new FileStream(name, FileMode.Open, FileAccess.Read);
                 sr = new StreamReader(fs);
 
+                //descarto la primer linea (cabecera)   
                 sr.ReadLine();
 
                 while (sr.EndOfStream != true)
@@ -54,16 +55,13 @@ public partial class Form1 : Form
                 if (fs != null) fs.Close();
             }
 
-
-
-
-
             if (vehiculos.Count != 0)
+            {
                 foreach (Vehiculo v in vehiculos)
                 {
                     txtMostrar.Text += v.ToString() + "\r\n";
                 }
-
+            }
         }
     }
 
@@ -100,6 +98,5 @@ public partial class Form1 : Form
                 if (fs != null) fs.Close();
             }
         }
-
     }
 }
